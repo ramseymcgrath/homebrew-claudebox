@@ -5,23 +5,23 @@
 class Claudebox < Formula
   desc "Containerized Claude Code with curated MCP servers"
   homepage "https://github.com/ramseymcgrath/claudebox"
-  version "0.6.1"
+  version "0.7.0"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.6.1/claudebox_darwin_amd64.tar.gz"
-      sha256 "d468836c56ef0738b4b64535336c1bb7a7e5b6cfe558f59e8d3b055660532350"
+      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.7.0/claudebox_darwin_amd64.tar.gz"
+      sha256 "0477da2453c2b4de9173e24618f62983a286916ce9dafe340a98b2dd8e563bf5"
 
       define_method(:install) do
         bin.install "claudebox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.6.1/claudebox_darwin_arm64.tar.gz"
-      sha256 "7e275c83cfa73d47e2bb319f09305c6993214e4e62c7cc299627e0e1a271aeba"
+      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.7.0/claudebox_darwin_arm64.tar.gz"
+      sha256 "4eda79cb9bcf922c71b60b997266df5f54f1822af0e98b6312ac112fab791116"
 
       define_method(:install) do
         bin.install "claudebox"
@@ -31,15 +31,15 @@ class Claudebox < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.6.1/claudebox_linux_amd64.tar.gz"
-      sha256 "58b49c2c74dff2025b537f6b46f520dc2d806cc1f6d567e661ef3101067be640"
+      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.7.0/claudebox_linux_amd64.tar.gz"
+      sha256 "6808a26f8b4b3e2dc341b31f8b226b4dc66cce652952c26e749698ce83b4b200"
       define_method(:install) do
         bin.install "claudebox"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.6.1/claudebox_linux_arm64.tar.gz"
-      sha256 "7f0cf78e3868a41a3d31fb422b525e947e723ac198d433166f2d5c02878f9149"
+      url "https://github.com/ramseymcgrath/claudebox/releases/download/v0.7.0/claudebox_linux_arm64.tar.gz"
+      sha256 "d18a8ab40d1b0561f9bc6217b97a5cf5fcfe030224981a39583be68df66f6220"
       define_method(:install) do
         bin.install "claudebox"
       end
